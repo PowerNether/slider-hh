@@ -1,36 +1,30 @@
-html,
-body {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .sliders {
   width: 100%;
-  height: 100%;
-  max-width: 728px;
-  max-height: 500px;
+  max-width: 1360px;
+  padding: 20px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
 }
 
 .slider {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  width: 100%;
+  min-width: 0;
+  max-width: 486px;
+  max-height: 380px;
+}
+.slider-vertical {
+  max-width: 612px;
+  max-height: 306px;
 }
 
 .swiper {
   width: 100%;
+  min-width: 0;
 }
 .swiper-slide {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .swiper-slide img {
   display: block;
