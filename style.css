@@ -1,0 +1,114 @@
+html,
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.sliders {
+  width: 100%;
+  height: 100%;
+  max-width: 728px;
+  max-height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.swiper {
+  width: 100%;
+}
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-main .swiper-slide img {
+  aspect-ratio: 728 / 455;
+}
+
+.slider-thumbnail {
+  box-sizing: border-box;
+  padding: 4px 0 0;
+}
+.slider-thumbnail .swiper-slide {
+  cursor: pointer;
+}
+.slider-thumbnail .swiper-slide img {
+  aspect-ratio: 120 / 85;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 38px;
+  height: 60px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+  transition: background 0.35s;
+  will-change: background;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: none;
+}
+.swiper-button-prev span,
+.swiper-button-next span {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 60px;
+  -webkit-mask: url(../i/icons/arrow.svg) 50% no-repeat;
+  mask: url(../i/icons/arrow.svg) 50% no-repeat;
+  -webkit-mask-size: 19px;
+  mask-size: 12px;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+.swiper-button-prev span {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slider-vertical {
+    flex-direction: row;
+  }
+  .slider-vertical .slider-thumbnail {
+    padding: 0 0 0 4px;
+  }
+  .slider-vertical .slider-main {
+    flex-basis: 100%;
+  }
+  .slider-vertical .slider-thumbnail {
+    flex-basis: 20%;
+    flex-shrink: 0;
+  }
+}
